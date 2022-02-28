@@ -2,9 +2,9 @@
 This project is for generate fake data figma plugin for component recognization, it can change color/text with random set easily. Feel free to add new fake function.
 ## 🌈Demo
 * Fake text
-![FakeText](https://media.giphy.com/media/U1qmxDj4eyCaRNwTVk/giphy.gif =320x320)
+![FakeText](https://github.com/clean99/figma-faker/master/public/faketext.gif)
 * Fake color
-![FakeColor](https://media.giphy.com/media/c8HiGcyCMh7MgbkYSy/giphy.gif =320x320)
+![FakeColor](https://github.com/clean99/figma-faker/master/public/fakecolor.gif)
 ## 🍒How to Use
 With only a few clicks, you can replace any place you want with random text/color!
 1. open plugin
