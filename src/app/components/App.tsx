@@ -4,18 +4,9 @@ import '../styles/ui.css';
 declare function require(path: string): any;
 
 const App = ({}) => {
-    const textbox = React.useRef<HTMLInputElement>(undefined);
-
-    const countRef = React.useCallback((element: HTMLInputElement) => {
-        if (element) element.value = '5';
-        textbox.current = element;
-    }, []);
-
-    const onCreate = () => {
-        const count = parseInt(textbox.current.value, 10);
-        parent.postMessage({pluginMessage: {type: 'create-rectangles', count}}, '*');
+    const onFake = () => {
+        parent.postMessage({pluginMessage: {type: 'fake-data'}}, '*');
     };
-
     const onCancel = () => {
         parent.postMessage({pluginMessage: {type: 'cancel'}}, '*');
     };
@@ -24,7 +15,7 @@ const App = ({}) => {
         // This is how we read messages sent from the plugin controller
         window.onmessage = (event) => {
             const {type, message} = event.data.pluginMessage;
-            if (type === 'create-rectangles') {
+            if (type === 'fake-message') {
                 console.log(`Figma Says: ${message}`);
             }
         };
@@ -33,12 +24,9 @@ const App = ({}) => {
     return (
         <div>
             <img src={require('../assets/logo.svg')} />
-            <h2>Rectangle Creator</h2>
-            <p>
-                Count: <input ref={countRef} />
-            </p>
-            <button id="create" onClick={onCreate}>
-                Create
+            <h2>Figma Faker</h2>
+            <button id="fake" onClick={onFake}>
+                Fake
             </button>
             <button onClick={onCancel}>Cancel</button>
         </div>
