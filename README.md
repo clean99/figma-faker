@@ -5,6 +5,12 @@ This project is for generate fake data figma plugin for component recognization,
 ![FakeText](https://media.giphy.com/media/U1qmxDj4eyCaRNwTVk/giphy.gif)
 * Fake color
 ![FakeColor](https://media.giphy.com/media/c8HiGcyCMh7MgbkYSy/giphy.gif)
+## 🍒How to Use
+With only a few clicks, you can replace any place you want with random text/color!
+1. open plugin
+2. select nodes that you want to replace with random data
+3. click Fake Text/Color
+4. done!
 ## 💫Quickstart
 * Run `yarn` to install dependencies.
 * Run `yarn build:watch` to start webpack in watch mode.
