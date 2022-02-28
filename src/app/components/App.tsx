@@ -4,8 +4,11 @@ import '../styles/ui.css';
 declare function require(path: string): any;
 
 const App = ({}) => {
-    const onFake = () => {
-        parent.postMessage({pluginMessage: {type: 'fake-data'}}, '*');
+    const onFakeText = () => {
+        parent.postMessage({pluginMessage: {type: 'fake-text'}}, '*');
+    };
+    const onFakeColor = () => {
+        parent.postMessage({pluginMessage: {type: 'fake-color'}}, '*');
     };
     const onCancel = () => {
         parent.postMessage({pluginMessage: {type: 'cancel'}}, '*');
@@ -18,6 +21,9 @@ const App = ({}) => {
             if (type === 'fake-message') {
                 console.log(`Figma Says: ${message}`);
             }
+            if (type === 'photo-message') {
+                console.log(`Figma Says: ${message}`);
+            }
         };
     }, []);
 
@@ -25,10 +31,15 @@ const App = ({}) => {
         <div>
             <img src={require('../assets/logo.svg')} />
             <h2>Figma Faker</h2>
-            <button id="fake" onClick={onFake}>
-                Fake
+            <div className='button-group'>
+            <button id="fake" onClick={onFakeText}>
+                Fake Text
+            </button>
+            <button id="fake" onClick={onFakeColor}>
+                Fake Color
             </button>
             <button onClick={onCancel}>Cancel</button>
+            </div>
         </div>
     );
 };

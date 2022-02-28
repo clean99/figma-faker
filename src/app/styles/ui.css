@@ -1,7 +1,18 @@
 body {
     font: 12px sans-serif;
+    display: flex;
     text-align: center;
-    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 32px;
+}
+.button-group {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
 }
 button {
     border-radius: 5px;
@@ -9,7 +20,7 @@ button {
     color: black;
     border: none;
     padding: 8px 15px;
-    margin: 0 5px;
+    margin: 5px 5px;
     box-shadow: inset 0 0 0 1px black;
     outline: none;
 }
