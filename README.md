@@ -1,7 +1,11 @@
-# Figma Faker
+# ⚽️Figma Faker 
 This project is for generate fake data figma plugin for component recognization, it can change color/text with random set easily. Feel free to add new fake function.
-
-## Quickstart
+## 🌈Demo
+* Fake text
+![FakeText](https://giphy.com/gifs/U1qmxDj4eyCaRNwTVk)
+* Fake color
+![FakeColor](https://giphy.com/embed/c8HiGcyCMh7MgbkYSy)
+## 💫Quickstart
 * Run `yarn` to install dependencies.
 * Run `yarn build:watch` to start webpack in watch mode.
 * Open `Figma` -> `Plugins` -> `Development` -> `Import plugin from manifest...` and choose `manifest.json` file from this repo.
