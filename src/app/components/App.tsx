@@ -13,9 +13,6 @@ const App = ({}) => {
     const onFakeCoordinate = () => {
         parent.postMessage({pluginMessage: {type: 'fake-coordinate'}}, '*');
     };
-    const onCancel = () => {
-        parent.postMessage({pluginMessage: {type: 'cancel'}}, '*');
-    };
 
     React.useEffect(() => {
         // This is how we read messages sent from the plugin controller
@@ -44,7 +41,6 @@ const App = ({}) => {
             <button id="fake" onClick={onFakeCoordinate}>
                 Fake Coordinate
             </button>
-            <button onClick={onCancel}>Cancel</button>
             </div>
         </div>
     );

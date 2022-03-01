@@ -20,7 +20,9 @@ export const nodesTraverserGenerator = (nodes:readonly SceneNode[]) => {
     },
     traverseNodes(type:string,method:Function,...args) {
       function traverse(node:SceneNode){
-        if (node.type === type) {
+        const typeReg = new RegExp(type)
+        if (typeReg.exec(node.type)) {
+          console.log(111)
           method(node,...args);
         }
         if(node.type === 'FRAME'|| node.type === 'GROUP'){

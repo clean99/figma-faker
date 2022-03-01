@@ -18,7 +18,7 @@ figma.ui.onmessage = (msg) => {
         // fake text and color
         const currentNode = figma.currentPage.selection;
         const traverser = nodesTraverserGenerator(currentNode);
-        traverser.traverseNodes('RECTANGLE',fakeColor)
+        traverser.traverseNodes('VECTOR',fakeColor)
         // This is how figma responds back to the ui
         figma.ui.postMessage({
             type: 'fake-data',
