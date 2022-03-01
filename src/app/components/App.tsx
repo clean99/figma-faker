@@ -10,6 +10,9 @@ const App = ({}) => {
     const onFakeColor = () => {
         parent.postMessage({pluginMessage: {type: 'fake-color'}}, '*');
     };
+    const onFakeCoordinate = () => {
+        parent.postMessage({pluginMessage: {type: 'fake-coordinate'}}, '*');
+    };
     const onCancel = () => {
         parent.postMessage({pluginMessage: {type: 'cancel'}}, '*');
     };
@@ -37,6 +40,9 @@ const App = ({}) => {
             </button>
             <button id="fake" onClick={onFakeColor}>
                 Fake Color
+            </button>
+            <button id="fake" onClick={onFakeCoordinate}>
+                Fake Coordinate
             </button>
             <button onClick={onCancel}>Cancel</button>
             </div>

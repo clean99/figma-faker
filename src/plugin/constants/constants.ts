@@ -1,0 +1,1 @@
+export const MAX_COLLISION_TEST_TIMES = 10

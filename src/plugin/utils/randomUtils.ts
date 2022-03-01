@@ -22,3 +22,11 @@ export const getRandomColor = () => {
     // return random rgb
     return '#'+Math.floor(Math.random()*16777215).toString(16); 
 }
+export const getRandomInteger = (num:number) => {
+    // return random integer with max Number
+    return Math.floor(Math.random()*num);
+}
+export const getRandomCoordinate = (...args) => {
+    // return random coordinate with dimension and max Number
+    return args.map(maxNum => getRandomInteger(maxNum));
+}
