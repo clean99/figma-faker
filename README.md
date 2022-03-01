@@ -1,5 +1,6 @@
 # ⚽️Figma Faker 
-This project is for generate fake data figma plugin for component recognization, it can change color/text with random set easily. Feel free to add new fake function.
+![FakeText](https://github.com/clean99/figma-faker/blob/master/public/figmafakercover.png)
+This project is for generate fake data figma plugin for component recognization, it can modify the nodes with random text/color/coordinate... easily. Feel free to add new fake function.
 ## 💫Feature
 * Fake text
 Randomly change the text of nodes.
